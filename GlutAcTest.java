@@ -1,33 +1,40 @@
-import java.util.ArrayList;
-
 public class GlutAcTest extends AATest implements  TranslInterface {
-    // protected Translatable nextInChain;
-		// protected String singleLetterCode;
-		// protected ProteinSequence aminoAcid;
-		// protected String peptide;
-		// protected int i;
-		// protected int j;
-	
+   
+	   private String peptide;
+
+       // all marked instances/variables inherited from AATest superclass !
+          
+		 //	protected TranslInterface nextInChain;
+		 //	protected String singleLetterCode;
+		 //	protected ProtTest aminoAcid;
+       // protected ArrayList<String> codons;
+			private SubTest substrings;
+		//	protected int i;
+		//	protected int j;
 	public GlutAcTest (String singleLetterCode ) {
 		this.singleLetterCode = singleLetterCode;
 	}
 
 	
-	public TranslInterface setNextChain(TranslInterface nextChain) {
+	@Override
+	public void setNextChain(TranslInterface nextChain) {
 		this.nextInChain = nextChain;	
-		return nextInChain;
 	}
 
 	
-	public String compareSub(ArrayList<String>codons, String peptide) {     
-		  codons.get(i);
+	@Override
+	public void compareSub(ProtTest aminoAcid) {     
+		  codons = substrings.getCodonsSub();
+		
 		  while( i < codons.size()) {  
-		  if (codons.equals("GAA")) {
+			  if (codons.equals("GAA")) {
 				singleLetterCode = "E";
 			     this.proteinSequence(peptide, singleLetterCode);
 			     i+=1;
 			     System.out.print(singleLetterCode+"_GlutAc1");
-				    // compareSub(codons); 			 
+			     peptide = peptide + singleLetterCode;
+			     aminoAcid.setPeptide(peptide);
+			     aminoAcid.setCodonsRNA(codons);
 				     }
 		  
 		  else if (codons.equals("GAG")) {
@@ -35,17 +42,19 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 			     this.proteinSequence(peptide, singleLetterCode);
 			     i+=1;
 			     System.out.print(singleLetterCode+"_GlutAc2");
-				    // compareSub(codons); 			 
+			     peptide = peptide + singleLetterCode;
+			     aminoAcid.setPeptide(peptide);
+			     aminoAcid.setCodonsRNA(codons);	 
 				     }
 		  
 		  else {   
-			   System.out.println("Dieses Codon war ungültig");                                     
+			   System.out.println("Dieses Codon war ungÃ¼ltig");                                     
  			   i+=1;
-			   nextInChain.compareSub(codons, peptide);
+			   nextInChain.compareSub(aminoAcid);
 			  
 		 		  }
 	 }
-		  return peptide;
+		
 	  }
 	
 	
