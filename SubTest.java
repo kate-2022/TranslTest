@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class SubTest {
 	
-	private String createSubstring;
 	private String substring;
     private String RNASequence;
    
@@ -11,7 +10,6 @@ public class SubTest {
 
 	public SubTest (String RNASequence) {
     	this.RNASequence = RNASequence;
-    	getCreateSubstring();
    
     }
 	
@@ -21,37 +19,23 @@ public class SubTest {
 	    substring = RNASequence.substring(i,i+3);
 		i = i+2;
 		codonsSub.add(substring);
-		// System.out.println(codons);
+		// System.out.println(codonsSub);
 		}
 		
 		return codonsSub;
 		}
 	
 	
-    public ArrayList<String> getCodons() {
+    public ArrayList<String> getCodonsSub() {
 		return codonsSub;
 	}
 
-	public void setCodons(ArrayList<String> codons) {
-		this.codonsSub = codons;
+
+	public void setCodonsSub(ArrayList<String> codonsSub) {
+		this.codonsSub = codonsSub;
 	}
 
-	
-	public String getCreateSubstring() {
-		return createSubstring;
-	}
 
-	public void setCreateSubstring(String createSubstring) {
-		this.createSubstring = createSubstring;
-	}
-
-	public String getSubstring() {
-		return substring;
-	}
-
-	public void setSubstring(String substring) {
-		this.substring = substring;
-	}
 
 	public String getRNASequence() {
 		return RNASequence;
