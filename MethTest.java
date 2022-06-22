@@ -7,10 +7,10 @@ public class MethTest extends AATest implements  TranslInterface {
 		    
 		    // protected TranslInterface nextInChain;
 		    // protected String singleLetterCode;
-		    protected ProtTest aminoAcid = new ProtTest(codons, ""); 		
+		   	 protected ProtTest aminoAcid = new ProtTest(codons, ""); 		
 		    // protected ArrayList<String> codons; 
-		    protected String source;
-			private SubTest substrings = new SubTest(source);
+	
+		 	private SubTest substrings = new SubTest("");
 			// protected int i;
 			// protected int j;
 
