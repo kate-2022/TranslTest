@@ -15,14 +15,14 @@ public class MainTest {
 	        // Codons für jede AA (compareSub ();)
 		    
 	       TranslInterface aa1 = new MethTest("M");        // codiert AUG    
+	      
 	       TranslInterface aa2 = new AlaTest("A");         // codiert GCU, GCC, GCA, GCG   
-		
 	       TranslInterface aa20 = new GlutAcTest ("E");    //  codiert GAA, GAG 
 		  
 		   
 		    aa1.setNextChain(aa2); 
 		    aa2.setNextChain(aa20);
-		    aa20.setNextChain(aa2);
+		    aa20.setNextChain(aa2);  
 		 
 		             // aa20 -> aa2    es geht ja in der Codon-Liste weiter mit dem nächsten Codon.. (Methionin ist nur Start-codon, deshalb zu aa2)
 		             //  dafür darf also auch nicht die Anweisung nextInChain.compareSub im else{}-Block zum Schluss wegfallen !!!
@@ -43,19 +43,18 @@ public class MainTest {
 			scan.close();
 			
 		    SubTest sub = new SubTest (source);  
-		    codonsM = sub.getCodonsSub(); 
+		 
 	        ProtTest prot1 = new ProtTest (codonsM, ">");		    
 		  
-			// codonsM = sub.getCodons(); 
 			codonsM = sub.createSubString(source);
 
 		    System.out.println("Die Substrings: " + codonsM);
 		         
 		    aa1.compareSub(prot1);  
 		    
-	             
+	        System.out.println("TestMain");   
 		    
-		   // System.out.print(peptide.toString());  
+		   // System.out.print(getPeptide().toString());  
 		                        // kein Zeilenumbruch, deshalb ohne ln !! ( die AA-Sequenz/ das Peptid soll kombiniert ausgegeben werden)
 
 		}
