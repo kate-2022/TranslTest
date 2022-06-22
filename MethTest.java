@@ -7,11 +7,12 @@ public class MethTest extends AATest implements  TranslInterface {
 		    
 		    // protected TranslInterface nextInChain;
 		    // protected String singleLetterCode;
-		   	 protected ProtTest aminoAcid = new ProtTest(codons, ""); 		
+		    protected ProtTest aminoAcid = new ProtTest(codons, ""); 		
 		    // protected ArrayList<String> codons; 
-	
-		 	private SubTest substrings = new SubTest("");
-			// protected int i;
+		    
+			private SubTest substrings = new SubTest("");
+		    
+			protected int i=0;
 			// protected int j;
 
 			
@@ -24,13 +25,16 @@ public class MethTest extends AATest implements  TranslInterface {
 		public void setNextChain(TranslInterface nextChain) {
 			this.nextInChain = nextChain;	
 		}
-		                                                                                      
+		                                                                                      // toString()-Methode anpassen!! s.u.
 		
 		@Override
-		public void compareSub(ProtTest aminoAcid) {                 
-			codons = substrings.getCodonsSub();
-
-			while( i < codons.size()) {  
+		public void compareSub(ProtTest aminoAcid) {  	
+				codons = substrings.getCodonsSub();
+			  
+				System.out.println("TestMeth");
+				
+			while( i < codons.size()) {  // ab hier stimmt etwas nicht.. der Index wird nicht erkannt!
+				System.out.println("TestMeth2");  
 			  if (codons.get(i).equals("AUG")) {                                
 				     singleLetterCode = "M";                       
 				     i+=1;	
@@ -40,12 +44,13 @@ public class MethTest extends AATest implements  TranslInterface {
 				     aminoAcid.setCodonsRNA(codons);
 				     }		
 	    
-	 		  else {                                        
+	 		  else {     
+	 			  System.out.println("testPrintMeth");
 	 			  nextInChain.compareSub(aminoAcid);
 			
 	 		  }
 		 }
-		  }    
+	 }    
 
 		
 		
@@ -83,13 +88,6 @@ public class MethTest extends AATest implements  TranslInterface {
 			this.aminoAcid = aminoAcid;
 		}
 
-		public String getSource() {
-			return source;
-		}
-
-		public void setSource(String source) {
-			this.source = source;
-		}
 
 		public SubTest getSubstrings() {
 			return substrings;
