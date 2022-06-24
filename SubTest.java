@@ -25,10 +25,11 @@ public class SubTest {
 	    substring = RNASequence.substring(i,i+3);
 		i = i+2;
 		codonsSub.add(substring);
-		System.out.println(codonsSub + "SubTest");
+	//	System.out.println(codonsSub + " SubTest");
 		}
-	//	ProtTest aminoAcid = new ProtTest(codonsSub, ">"); 
-		aa1.compareSub(codonsSub, ">");
+		System.out.println("RNA substrings: " + codonsSub);
+	
+		aa1.compareSub(codonsSub, "> ");
 		return codonsSub;
 		}
 	
