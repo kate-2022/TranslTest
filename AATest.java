@@ -25,7 +25,7 @@ public class AATest implements TranslInterface {
 
 
 	@Override
-	public void compareSub(ProtTest aminoAcid) {
+	public void compareSub(ArrayList<String> codons, String peptide) {
 		// TODO Auto-generated method stub
 		
 	}
