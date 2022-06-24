@@ -31,13 +31,9 @@ public class MethTest extends AATest implements  TranslInterface {
 		
 		@Override
 		public void compareSub(ArrayList<String> codons, String peptide) {  	
-			 //   codons = substrings.getCodonsSub();
-		        
-			System.out.println(codons.get(i)+" TestMeth");
-				
-			//	codons.get(i);
-		       // System.out.println("xy" + codons.contains(i));		    	
-				
+					
+			System.out.println(codons.get(i)+" TestMeth");				
+	    					
 			if( i < codons.size()) {  
 				System.out.println("TestMeth1");  
 			  if (codons.get(i).equals("AUG")) {                                
