@@ -9,8 +9,8 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 		 //	protected TranslInterface nextInChain;
 		 //	protected String singleLetterCode;
 		 //	protected ProtTest aminoAcid;
-	   	 // protected ArrayList<String> codons;
-         //	protected int i;
+	   	 //     protected ArrayList<String> codons;
+     		 //	protected int i;
 		 //	protected int j;
 	   
 	public GlutAcTest (String singleLetterCode ) {
