@@ -26,7 +26,7 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 	
 	@Override
 	public void compareSub(ArrayList<String> codons, String peptide) {     
-			codons.get(i);
+		//	codons.get(i);
 			System.out.println("TestGlucAc");  
 			
 		  if( i < codons.size()) {  
