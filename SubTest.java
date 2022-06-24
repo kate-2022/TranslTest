@@ -4,9 +4,9 @@ public class SubTest {
 	
 	private String substring;
     private String RNASequence;
-   
+    private TranslInterface aa1 = new MethTest("M");
     private ArrayList<String> codonsSub = new ArrayList<String>();
-  
+   
 
 	public SubTest (String RNASequence) {
     	this.RNASequence = RNASequence;
@@ -19,9 +19,10 @@ public class SubTest {
 	    substring = RNASequence.substring(i,i+3);
 		i = i+2;
 		codonsSub.add(substring);
-		// System.out.println(codonsSub);
+		System.out.println(codonsSub + "SubTest");
 		}
-		
+	//	ProtTest aminoAcid = new ProtTest(codonsSub, ">"); 
+		aa1.compareSub(codonsSub, ">");
 		return codonsSub;
 		}
 	
