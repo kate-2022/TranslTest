@@ -5,7 +5,7 @@ public class MainTest {
 
 	public static void main(String[] args) {
 		   String source = "";
-		   String peptide =">";
+		  // String peptide =">";
 	        
 	        
 	       ArrayList<String> codonsM = new ArrayList<String>();
@@ -24,7 +24,7 @@ public class MainTest {
 		    aa2.setNextChain(aa20);
 		    aa20.setNextChain(aa2);  */
 		 
-		             // aa20 -> aa2    es geht ja in der Codon-Liste weiter mit dem nächsten Codon.. (Methionin ist nur Start-codon, deshalb zu aa2)
+    	             // aa20 -> aa2    es geht ja in der Codon-Liste weiter mit dem nächsten Codon.. (Methionin ist nur Start-codon, deshalb zu aa2)
 		             //  dafür darf also auch nicht die Anweisung nextInChain.compareSub im else{}-Block zum Schluss wegfallen !!!
 		    
 			Scanner scan = new Scanner (System.in);
@@ -45,18 +45,11 @@ public class MainTest {
 		    SubTest sub = new SubTest (source);  	    
 		  
 			codonsM = sub.createSubString(source);
-
-		    System.out.println("Die Substrings: " + codonsM);
-		          
 		    
-	        System.out.println("TestMain");   
+	       // System.out.println("TestMain");   
 		    
-		    //System.out.print(getPeptide().toString());  
-		                        // kein Zeilenumbruch, deshalb ohne ln !! ( die AA-Sequenz/ das Peptid soll kombiniert ausgegeben werden)
-
+		
 		}
 
 
 	}
-
-
