@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class AlaTest extends AATest implements  TranslInterface  {
 
             private String peptide;
@@ -8,9 +10,8 @@ public class AlaTest extends AATest implements  TranslInterface  {
 		 //	protected String singleLetterCode;
 		 //	protected ProtTest aminoAcid;
          // protected ArrayList<String> codons;
-			private SubTest substrings;
-		//	protected int i;
-		//	protected int j;
+         //	protected int i;
+		 //	protected int j;
 			
 	
 	public AlaTest (String singleLetterCode) {
@@ -26,9 +27,10 @@ public class AlaTest extends AATest implements  TranslInterface  {
 	
  	
    	@Override
-	public void compareSub(ProtTest aminoAcid) {    
-   		  codons = substrings.getCodonsSub();
-   	
+	public void compareSub(ArrayList<String> codons, String peptide) {    
+   		  	codons.get(i);
+   		    System.out.println("TestAla");  
+   		    
 		  while( i < codons.size()) {  
 			  if (codons.get(i).equals("GCA")) {
 				singleLetterCode = "A";
@@ -66,13 +68,14 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     aminoAcid.setCodonsRNA(codons);   
 			     }
 		  
-			  else {                                        
- 			  nextInChain.compareSub(aminoAcid);
+			  else {        
+				  System.out.println("testPrintAla");
+				  nextInChain.compareSub(codons, peptide);
 	
- 		  }
-	 }
+			  }
+		  }
 
-	  }
+   	}
 	
 	
 	
