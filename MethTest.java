@@ -5,16 +5,15 @@ public class MethTest extends AATest implements  TranslInterface {
 	  
 		    private String peptide = ">";
 		   
-		    // all marked instances/variables inherited from AATest superclass !
+		    //  all marked instances/variables inherited from AATest superclass !
 		    
-		    // protected TranslInterface nextInChain;
-		    // protected String singleLetterCode;
+		    //  protected TranslInterface nextInChain;
+		    //  protected String singleLetterCode;
 		    protected ProtTest aminoAcid = new ProtTest(codons, ""); 		
-		    //protected ArrayList<String> codons; 
-		    
-			// private SubTest substrings = new SubTest("") ;
-			// protected int i;
-			// protected int j;
+		    //  protected ArrayList<String> codons; 		    
+		    //  private SubTest substrings = new SubTest("") ;
+		    //  protected int i;
+		    //  protected int j;
 
 			
 		// Konstruktor
