@@ -6,9 +6,9 @@ public class AATest implements TranslInterface {
 	                                           to instantiate TranslInterface nextInChain !*/
 	protected String singleLetterCode;
     protected ProtTest aminoAcid;
-	protected ArrayList<String> codons;
+	// protected ArrayList<String> codons;
 	protected int i;
-	protected int j;
+
     
     
 	public String proteinSequence(String peptide, String singleLetterCode) {
