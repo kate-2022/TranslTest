@@ -31,7 +31,7 @@ public class AlaTest extends AATest implements  TranslInterface  {
    		  	codons.get(i);
    		    System.out.println("TestAla");  
    		    
-		  while( i < codons.size()) {  
+		  if( i < codons.size()) {  
 			  if (codons.get(i).equals("GCA")) {
 				singleLetterCode = "A";
 			     i+=1;
@@ -39,6 +39,8 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     peptide = peptide + singleLetterCode;
 			     aminoAcid.setPeptide(peptide);
 			     aminoAcid.setCodonsRNA(codons);
+			     System.out.println("TestAla2");	
+			     nextInChain.compareSub(codons, peptide);
 				     }
 			  
 			  else if (codons.get(i).equals("GCC")) {
@@ -48,6 +50,8 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     peptide = peptide + singleLetterCode;
 			     aminoAcid.setPeptide(peptide);
 			     aminoAcid.setCodonsRNA(codons);
+			     System.out.println("TestAla3");	
+			     nextInChain.compareSub(codons, peptide);
 				     }
 			  
 			  else if (codons.get(i).equals("GCG")) {
@@ -57,6 +61,8 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     peptide = peptide + singleLetterCode;
 			     aminoAcid.setPeptide(peptide);
 			     aminoAcid.setCodonsRNA(codons);
+			     System.out.println("TestAla4");	
+			     nextInChain.compareSub(codons, peptide);
 				     } 
 			  
 			  else if (codons.get(i).equals("GCU")) {
@@ -66,6 +72,8 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     peptide = peptide + singleLetterCode;
 			     aminoAcid.setPeptide(peptide);
 			     aminoAcid.setCodonsRNA(codons);   
+			     System.out.println("TestAla5");	
+			     nextInChain.compareSub(codons, peptide);
 			     }
 		  
 			  else {        
@@ -74,6 +82,9 @@ public class AlaTest extends AATest implements  TranslInterface  {
 	
 			  }
 		  }
+		  else {
+				System.out.println("we´re done! :)");
+			}
 
    	}
 	
