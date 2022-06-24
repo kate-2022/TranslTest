@@ -28,7 +28,7 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 			codons.get(i);
 			System.out.println("TestGlucAc");  
 			
-		  while( i < codons.size()) {  
+		  if( i < codons.size()) {  
 			  if (codons.get(i).equals("GAA")) {
 				singleLetterCode = "E";
 			     this.proteinSequence(peptide, singleLetterCode);
@@ -37,6 +37,8 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 			     peptide = peptide + singleLetterCode;
 			     aminoAcid.setPeptide(peptide);
 			     aminoAcid.setCodonsRNA(codons);
+			     System.out.println("TestGlucAc2");	
+			     nextInChain.compareSub(codons, peptide);
 				     }
 		  
 		  else if (codons.get(i).equals("GAG")) {
@@ -46,7 +48,9 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 			     System.out.print(singleLetterCode+"_GlutAc2");
 			     peptide = peptide + singleLetterCode;
 			     aminoAcid.setPeptide(peptide);
-			     aminoAcid.setCodonsRNA(codons);	 
+			     aminoAcid.setCodonsRNA(codons);	
+			     System.out.println("TestGlucAc3");	
+			     nextInChain.compareSub(codons, peptide);
 				     }
 		  
 		  else {   
@@ -56,6 +60,9 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 			  
 		  	}
 		  }	 
+		  else {
+				System.out.println("we´re done! :)");
+			}
 	}
 	
 	
