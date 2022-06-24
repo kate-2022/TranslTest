@@ -4,12 +4,18 @@ public class SubTest {
 	
 	private String substring;
     private String RNASequence;
-    private TranslInterface aa1 = new MethTest("M");
     private ArrayList<String> codonsSub = new ArrayList<String>();
+    
+    TranslInterface aa1 = new MethTest("M");        
+    TranslInterface aa2 = new AlaTest("A");         
+    TranslInterface aa20 = new GlutAcTest ("E"); 
    
 
 	public SubTest (String RNASequence) {
     	this.RNASequence = RNASequence;
+    	 aa1.setNextChain(aa2); 
+		 aa2.setNextChain(aa20);
+		 aa20.setNextChain(aa2);  
    
     }
 	
