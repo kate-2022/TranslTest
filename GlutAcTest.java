@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class GlutAcTest extends AATest implements  TranslInterface {
    
 	   private String peptide;
@@ -7,10 +9,9 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 		 //	protected TranslInterface nextInChain;
 		 //	protected String singleLetterCode;
 		 //	protected ProtTest aminoAcid;
-       // protected ArrayList<String> codons;
-			private SubTest substrings;
-		//	protected int i;
-		//	protected int j;
+	   	 // protected ArrayList<String> codons;
+         //	protected int i;
+		 //	protected int j;
 	public GlutAcTest (String singleLetterCode ) {
 		this.singleLetterCode = singleLetterCode;
 	}
@@ -23,11 +24,12 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 
 	
 	@Override
-	public void compareSub(ProtTest aminoAcid) {     
-		  codons = substrings.getCodonsSub();
-		
+	public void compareSub(ArrayList<String> codons, String peptide) {     
+			codons.get(i);
+			System.out.println("TestGlucAc");  
+			
 		  while( i < codons.size()) {  
-			  if (codons.equals("GAA")) {
+			  if (codons.get(i).equals("GAA")) {
 				singleLetterCode = "E";
 			     this.proteinSequence(peptide, singleLetterCode);
 			     i+=1;
@@ -37,7 +39,7 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 			     aminoAcid.setCodonsRNA(codons);
 				     }
 		  
-		  else if (codons.equals("GAG")) {
+		  else if (codons.get(i).equals("GAG")) {
 				singleLetterCode = "E";
 			     this.proteinSequence(peptide, singleLetterCode);
 			     i+=1;
@@ -50,12 +52,11 @@ public class GlutAcTest extends AATest implements  TranslInterface {
 		  else {   
 			   System.out.println("Dieses Codon war ungültig");                                     
  			   i+=1;
-			   nextInChain.compareSub(aminoAcid);
+			   nextInChain.compareSub(codons, peptide);
 			  
-		 		  }
-	 }
-		
-	  }
+		  	}
+		  }	 
+	}
 	
 	
 	
