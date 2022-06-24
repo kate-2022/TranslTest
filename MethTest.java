@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class MethTest extends AATest implements  TranslInterface {
 
 	  
@@ -8,11 +10,10 @@ public class MethTest extends AATest implements  TranslInterface {
 		    // protected TranslInterface nextInChain;
 		    // protected String singleLetterCode;
 		    protected ProtTest aminoAcid = new ProtTest(codons, ""); 		
-		    // protected ArrayList<String> codons; 
+		    //protected ArrayList<String> codons; 
 		    
-			private SubTest substrings = new SubTest("");
-		    
-			protected int i=0;
+			// private SubTest substrings = new SubTest("") ;
+			// protected int i;
 			// protected int j;
 
 			
@@ -28,12 +29,16 @@ public class MethTest extends AATest implements  TranslInterface {
 		                                                                                      // toString()-Methode anpassen!! s.u.
 		
 		@Override
-		public void compareSub(ProtTest aminoAcid) {  	
-				codons = substrings.getCodonsSub();
-			  
-				System.out.println("TestMeth");
+		public void compareSub(ArrayList<String> codons, String peptide) {  	
+			 //   codons = substrings.getCodonsSub();
+		        
+			System.out.println(codons.get(i)+"TestMeth");
 				
-			while( i < codons.size()) {  // ab hier stimmt etwas nicht.. der Index wird nicht erkannt!
+				codons.get(i);
+		        System.out.println("xy" + codons.contains(i));
+		    	
+				System.out.println("TestMeth1");	
+			while( i < codons.size()) {  
 				System.out.println("TestMeth2");  
 			  if (codons.get(i).equals("AUG")) {                                
 				     singleLetterCode = "M";                       
@@ -46,12 +51,12 @@ public class MethTest extends AATest implements  TranslInterface {
 	    
 	 		  else {     
 	 			  System.out.println("testPrintMeth");
-	 			  nextInChain.compareSub(aminoAcid);
-			
+	 			  nextInChain.compareSub(codons, peptide);
+			 
 	 		  }
 		 }
 	 }    
-
+		
 		
 		
 		@Override
@@ -88,14 +93,6 @@ public class MethTest extends AATest implements  TranslInterface {
 			this.aminoAcid = aminoAcid;
 		}
 
-
-		public SubTest getSubstrings() {
-			return substrings;
-		}
-
-		public void setSubstrings(SubTest substrings) {
-			this.substrings = substrings;
-		}
 
 	
 	    
