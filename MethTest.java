@@ -41,8 +41,6 @@ public class MethTest extends AATest implements  TranslInterface {
 				     i+=1;	
 				     System.out.println(singleLetterCode + " Meth ");
 				     peptide = peptide + singleLetterCode;
-				     aminoAcid.setPeptide(peptide);
-				     aminoAcid.setCodonsRNA(codons);
 				     System.out.println("TestMeth2");	
 				     nextInChain.compareSub(codons, peptide);
 				     }		
