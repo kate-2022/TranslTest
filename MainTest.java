@@ -42,15 +42,12 @@ public class MainTest {
 			
 			scan.close();
 			
-		    SubTest sub = new SubTest (source);  
-		 
-	        ProtTest prot1 = new ProtTest (codonsM, ">");		    
+		    SubTest sub = new SubTest (source);  	    
 		  
 			codonsM = sub.createSubString(source);
 
 		    System.out.println("Die Substrings: " + codonsM);
-		         
-		    aa1.compareSub(prot1);  
+		          
 		    
 	        System.out.println("TestMain");   
 		    
@@ -61,5 +58,7 @@ public class MainTest {
 
 
 	}
+
+
 
 
