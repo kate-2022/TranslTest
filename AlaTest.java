@@ -9,8 +9,8 @@ public class AlaTest extends AATest implements  TranslInterface  {
 		 //	protected TranslInterface nextInChain;
 		 //	protected String singleLetterCode;
 		 //	protected ProtTest aminoAcid;
-    	         //     protected ArrayList<String> codons;
-       		 //	protected int i;
+         // protected ArrayList<String> codons;
+         //	protected int i;
 		 //	protected int j;
 			
 	
@@ -37,8 +37,6 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     i+=1;
 			     System.out.print(singleLetterCode+"_Ala1");	
 			     peptide = peptide + singleLetterCode;
-			     aminoAcid.setPeptide(peptide);
-			     aminoAcid.setCodonsRNA(codons);
 			     System.out.println("TestAla2");	
 			     nextInChain.compareSub(codons, peptide);
 				     }
@@ -48,8 +46,6 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     i+=1;
 			     System.out.print(singleLetterCode+"_Ala2");
 			     peptide = peptide + singleLetterCode;
-			     aminoAcid.setPeptide(peptide);
-			     aminoAcid.setCodonsRNA(codons);
 			     System.out.println("TestAla3");	
 			     nextInChain.compareSub(codons, peptide);
 				     }
@@ -59,8 +55,6 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     i+=1;
 			     System.out.print(singleLetterCode+"_Ala3");
 			     peptide = peptide + singleLetterCode;
-			     aminoAcid.setPeptide(peptide);
-			     aminoAcid.setCodonsRNA(codons);
 			     System.out.println("TestAla4");	
 			     nextInChain.compareSub(codons, peptide);
 				     } 
@@ -70,8 +64,6 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			     i+=1;
 			     System.out.print(singleLetterCode+"_Ala4"); 
 			     peptide = peptide + singleLetterCode;
-			     aminoAcid.setPeptide(peptide);
-			     aminoAcid.setCodonsRNA(codons);   
 			     System.out.println("TestAla5");	
 			     nextInChain.compareSub(codons, peptide);
 			     }
@@ -83,7 +75,7 @@ public class AlaTest extends AATest implements  TranslInterface  {
 			  }
 		  }
 		  else {
-				System.out.println("we´re done! :)");
+			  System.out.println(peptide);
 			}
 
    	}
