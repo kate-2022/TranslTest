@@ -35,7 +35,7 @@ public class MethTest extends AATest implements  TranslInterface {
 		        
 			System.out.println(codons.get(i)+" TestMeth");
 				
-				codons.get(i);
+			//	codons.get(i);
 		       // System.out.println("xy" + codons.contains(i));		    	
 				
 			if( i < codons.size()) {  
