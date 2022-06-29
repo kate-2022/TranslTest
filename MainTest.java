@@ -10,9 +10,9 @@ public class MainTest {
 	        
 	       ArrayList<String> codonsM = new ArrayList<String>();
 		   
-		    // Einzelne AminosÃ¤uren = Objekte vom Typ TranslInterface (Klassen die das Interface implementieren) 
+		    // Einzelne Aminosäuren = Objekte vom Typ TranslInterface (Klassen die das Interface implementieren) 
 		    // zum Vergleich des jeweiligen Substrings aus der ArrayList <String> codons mit den jeweiligen spezifischen 
-	        // Codons fÃ¼r jede AA (compareSub ();)
+	        // Codons für jede AA (compareSub ();)
 		    
 	    /*  TranslInterface aa1 = new MethTest("M");        // codiert AUG    
 	      
@@ -24,8 +24,8 @@ public class MainTest {
 		    aa2.setNextChain(aa20);
 		    aa20.setNextChain(aa2);  */
 		 
-    	             // aa20 -> aa2    es geht ja in der Codon-Liste weiter mit dem nÃ¤chsten Codon.. (Methionin ist nur Start-codon, deshalb zu aa2)
-		             //  dafÃ¼r darf also auch nicht die Anweisung nextInChain.compareSub im else{}-Block zum Schluss wegfallen !!!
+    	             // aa20 -> aa2    es geht ja in der Codon-Liste weiter mit dem nächsten Codon.. (Methionin ist nur Start-codon, deshalb zu aa2)
+		             //  dafür darf also auch nicht die Anweisung nextInChain.compareSub im else{}-Block zum Schluss wegfallen !!!
 		    
 			Scanner scan = new Scanner (System.in);
 			System.out.println("Bitte geben Sie eine RNA-Sequenz ein. ");
@@ -53,3 +53,5 @@ public class MainTest {
 
 
 	}
+
+

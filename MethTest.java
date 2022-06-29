@@ -7,11 +7,11 @@ public class MethTest extends AATest implements  TranslInterface {
 		   
 		    // all marked instances/variables inherited from AATest superclass !
 		    
-		    protected TranslInterface nextInChain;
+		    // protected TranslInterface nextInChain;
 		    // protected String singleLetterCode;
 		    		
 		    protected ArrayList<String> codons; 
-		    protected ProtTest aminoAcid = new ProtTest(codons, ""); 	
+		   // protected ProtTest aminoAcid = new ProtTest(codons, ""); 	
 			// private SubTest substrings = new SubTest("") ;
 			// protected int i;
 		
@@ -20,7 +20,6 @@ public class MethTest extends AATest implements  TranslInterface {
 		// Konstruktor
 		public MethTest (String singleLetterCode) {
 			this.singleLetterCode = singleLetterCode;
-			// setNextInChain(aa2);
 		}
 
 		@Override
@@ -33,16 +32,17 @@ public class MethTest extends AATest implements  TranslInterface {
 		public void compareSub(ArrayList<String> codons, String peptide) {  	
 			ArrayList<String> codons1 = new ArrayList<String>();    
 			
-		//	System.out.println(codons.get(i)+" TestMeth");	    	
+			System.out.println(codons.get(i)+" TestMeth");	    	
 				
-			if( i < codons.size()) {  
-			//	System.out.println("TestMeth1");  
+			if( i <= codons.size()) {  
+				System.out.println("TestMeth1");  
+				
 			  if (codons.get(i).equals("AUG")) {                                
 				     singleLetterCode = "M";                       
 				     i+=1;	
-				//     System.out.println(codons.get(i)+" testAsc");
+				     System.out.println(codons.get(i)+" testAsc");
 				     
-				//     System.out.println(singleLetterCode + " Meth ");
+				     System.out.println(singleLetterCode + " Meth ");
 				     peptide = peptide + singleLetterCode;
 				     
 				     codons.remove(0);
@@ -51,7 +51,7 @@ public class MethTest extends AATest implements  TranslInterface {
 				     }		
 	    
 	 		  else {     
-	 			//  System.out.println("testPrintMeth");
+	 			  System.out.println("testPrintMeth");
 	 			  nextInChain.compareSub(codons1, peptide);
 			 
 	 		  }
